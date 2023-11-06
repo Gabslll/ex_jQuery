@@ -18,7 +18,7 @@ body {
         background-image: url("img/wave.jpg");
     }
     25% {
-        background-image: url("img/wave2.jpg");
+        background-image: url("img/wave\ 2.jpg");
     }
     50% {
         background-image: url("img/block.jpg");
