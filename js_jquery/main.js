@@ -3,10 +3,6 @@ $(document).ready(function () {
     $('#cpf').mask('000.000.000-00');
     $('#cep').mask('00000-000');
     
-    $('form').on('submit', function(e) {
-        e.preventDefault();
-    })
-    
 });
 $('form').validate({
     rules: {
@@ -41,11 +37,11 @@ $('form').validate({
         endereco: "Por favor, insira seu endereço",
         cep: "Por favor, insira seu CEP"
     },
-    submitHandler: function(form) {
-        console.log(form)
-    },
-    invalidHandler: function(evento, validador) {
+    submitbefore: function(evento, validador) {
         let camposIncorretos = numberOfInvalids();
-        console.log(camposIncorretos);
+    },
+    submitHandler: function(form) {
+        return false;
     }
 });
+
